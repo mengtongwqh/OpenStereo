@@ -19,7 +19,7 @@ from matplotlib.collections import (
 # from matplotlib.mlab import griddata
 import matplotlib.patheffects as PathEffects
 from matplotlib.font_manager import FontProperties
-from mpl_toolkits.axes_grid.axislines import Subplot
+from mpl_toolkits.axisartist.axislines import Subplot
 
 from matplotlib.lines import Line2D
 
@@ -1174,7 +1174,7 @@ class ClassificationPlot(PlotPanel):
                 size=fontsize,
                 horizontalalignment="right",
                 color="grey",
-                rotation="60",
+                rotation=60,
             )
             axes.text(
                 i,
@@ -1194,7 +1194,7 @@ class ClassificationPlot(PlotPanel):
                 size=fontsize,
                 horizontalalignment="left",
                 color="grey",
-                rotation="-60",
+                rotation=-60,
             )
 
         for plot_item in self.plot_list:
@@ -1404,7 +1404,7 @@ def PlotStereoNetCircle(axes, caxes, fontsize, rotate):
         radius=1,
         edgecolor="black",
         facecolor="none",
-        clip_box="None",
+        clip_box=None,
         label="_nolegend_",
     )
     axes.add_patch(circ)
